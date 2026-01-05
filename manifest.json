@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Chatwork → Workflowy Copy (Bullet-Quote)",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "選択したチャットを bullet + block-quote 形式でコピー",
   "permissions": [
     "contextMenus",
