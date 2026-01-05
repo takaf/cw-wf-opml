@@ -83,19 +83,12 @@ function buildOPML() {
 
   const url = `${location.origin}/#!rid${rid}-${msgId}`;
 
-  // aid/time は “最小改修” でフォールバック（必要なら後で本物を取りに行く）
-  const aid  = "0";
-  const time = String(Math.floor(Date.now() / 1000));
-
   const bulletText = `Chatwork引用: <a href="${url}">◎</a>`;
-  const noteRaw = `[引用 aid=${aid} time=${time}]` + cache.text + "\n";
+  const noteRaw = cache.text + "\n";
 
   return `<?xml version="1.0"?>
 <opml version="2.0">
   <head>
-    <ownerEmail>
-      soundphile@me.com
-    </ownerEmail>
   </head>
   <body>
     <outline text="${escXml(bulletText)}" _note="${escXmlNote(noteRaw)}" />
